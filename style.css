@@ -108,7 +108,7 @@ body{
   /* >>>>>>>>>> */
 
   #main{
-    max-width: 800px;
+    max-width: 900px;
     box-sizing: border-box;
     padding: 1%;
     place-self: center;
@@ -274,6 +274,7 @@ body{
   }
 
   .card {
+    margin-bottom: 12px;
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -495,7 +496,7 @@ body{
     text-align: center;
 }
    #main2{
-    max-width:800px !important;
+    max-width:900px !important;
     place-self: center;
     padding: 2%;
     box-sizing: border-box;
@@ -554,7 +555,7 @@ body{
 }
 .accordion {
    
-    width: 800px;
+    max-width: 900px;
     place-self: center;
     margin: 20px auto;
     background: white;
@@ -877,7 +878,7 @@ padding-bottom: 50px;
       }
       #slider2 img{
         width:300px !important;
-        height: 400px !important;
+        height: 390px !important;
       }
 
       #slide3{
@@ -915,4 +916,4 @@ padding-bottom: 50px;
        
     }
     
-    
+
