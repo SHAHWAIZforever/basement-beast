@@ -24,7 +24,7 @@ body{
     font-weight: 500;
 }
 #section1>center>section>img{
-    width: 80%;
+    width: 70%;
 }
 #section1>center>img{
     height: 80px;
@@ -108,7 +108,7 @@ body{
   /* >>>>>>>>>> */
 
   #main{
-    max-width: 1300px;
+    max-width: 800px;
     box-sizing: border-box;
     padding: 1%;
     place-self: center;
@@ -116,109 +116,113 @@ body{
   #main>center>img{
     width: 100%;
   }
-  #main h1{
-    font-weight: 700;
-    font-size:80px;
-    line-height: 1.04; /* adjust spacing */
-  margin: 0; /* remove default h1 margin if needed */
+ 
+
+  /* >>>>>>>>>>>>>>>>> */
+  .bigonly {
+    display: flex;
+    display: none;
+    justify-content: center;
+    gap:0px; /* optional spacing between images */
+    align-items: center; /* vertically align images */
+  }
+
+  #bigonly img {
+    max-width:300px; /* prevents images from overflowing */
+    height: auto;
+  }
+/* Base styles (already provided by you) */
+#main h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.04;
+  margin: 0;
   text-transform: uppercase;
+}
 
-  }
-  #main>center>h2{
-    font-weight: 700;
-    font-size:50px;
-    line-height: 1.04; /* adjust spacing */
-  margin: 0; /* remove default h1 margin if needed */
+
+.outlined-text {
+  display: block;
   text-transform: uppercase;
+  width: 100%;
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
 
-  }
+#main > center > h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.04;
+  margin: 0;
+  text-transform: uppercase;
+}
 
-  .outlined-text {
-display: block;
-text-transform: uppercase;
+/* Media Queries for Responsive Typography */
 
-width: 100%;
-    font-weight: 700;
-    font-size:80px;
-    color: white;
-    text-shadow:
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-      -1px  1px 0 #000,
-       1px  1px 0 #000; /* creates black border */
-  }
-
-  /* Large tablets (landscape) */
+/* Tablet Landscape and Below */
 @media (max-width: 1024px) {
-    #main h1,
-    .outlined-text {
-      font-size: 60px;
-    }
+  #main h1,
+  .outlined-text {
+    font-size: 44px;
   }
+
+  #main > center > h2 {
+    font-size: 30px;
+  }
+}
+
+/* Tablet Portrait and Below */
+@media (max-width: 768px) {
+
+  #main h1,
+  .outlined-text {
+    font-size: 28px;
+  }
+
+  #main > center > h2 {
+    font-size: 24px;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 600px) {
+
+  #main h1,
+  .outlined-text {
+    font-size: 22px;
+  }
+
+  #main > center > h2 {
+    font-size: 22px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  #main h1,
+  .outlined-text {
+    font-size: 22px;
+  }
+
+  #main > center > h2 {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+  /* >>>>>>>>>>>>>>>>>> */
+
   
-  /* Tablets (portrait) */
-  @media (max-width: 768px) {
-    #main h1,
-    .outlined-text {
-      font-size: 45px;
-    }
-  }
-  
-  /* Small devices (large phones) */
-  @media (max-width: 600px) {
-    #main h1,
-    .outlined-text {
-      font-size: 36px;
-    }
-  }
-  
-  /* Extra small devices (phones) */
-  @media (max-width: 480px) {
-    #main h1,
-    .outlined-text {
-      font-size: 28px;
-    }
-  }
-  
-  /* Very small devices (old phones, watch, etc.) */
-  @media (max-width: 360px) {
-    #main h1,
-    .outlined-text {
-      font-size: 22px;
-    }
-  }
-  
-  #main>center>h2 {
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 1.04;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  /* Medium devices (tablets, 768px and up) */
-  @media (max-width: 1024px) {
-    #main h2 {
-      font-size: 40px;
-      line-height: 1.1;
-    }
-  }
-  
-  /* Small devices (landscape phones, 576px and up) */
-  @media (max-width: 768px) {
-    #main h2 {
-      font-size: 32px;
-      line-height: 1.15;
-    }
-  }
-  
-  /* Extra small devices (portrait phones, less than 576px) */
-  @media (max-width: 480px) {
-    #main h2 {
-      font-size: 24px;
-      line-height: 1.2;
-    }
-  }
+
 
   
 
@@ -262,7 +266,7 @@ width: 100%;
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap:1px;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 1%;
@@ -290,7 +294,7 @@ width: 100%;
   
   .card-content {
     padding: 15px;
-    height: 240px;
+    height: auto;
   }
 
   .card-content h2 {
@@ -302,7 +306,7 @@ width: 100%;
   .card-content p {
     margin: 0;
     color: #555;
-    font-size: 14px;
+   font-size: 10px;
   }
 
   .card>section{
@@ -324,16 +328,21 @@ width: 100%;
     background: none;
   }
   .card2{
-    padding-top: 0;
+    
     box-shadow: none;
     width:30%;
+    height: 420px;
+    
+  }
+  .card2>section{
+    height:40%;
   }
   .e2{
     gap: 10px !important;
     justify-content: center !important;
   }
   .card2>.card-content {
-    height: 200px;
+    height:auto;
     box-sizing: border-box;
  text-align: left !important;
   }
@@ -367,6 +376,36 @@ width: 100%;
     width: 20px;
     margin: 1%;
   }
+
+  .card2 {
+    height: 340px;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+  }
+  
+  .card2 > section {
+    height: 40%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 3% !important;
+    padding: 0;
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-bottom: 20px;
+  }
+  
+  .card2 > .card-content {
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 1% !important;
+    display: grid !important;
+    place-items: start !important; /* Align content to top-left */
+    text-align: left !important;
+    flex-grow: 1;
+  }
+  
   /* Tablet */
   @media (max-width: 768px) {
     .card {
@@ -387,15 +426,15 @@ width: 100%;
 
   .video-container {
     display: flex;
-    flex-wrap: wrap;
+   
     justify-content: center;
-    gap: 60px; /* ✅ Large gap between videos */
+    gap: 10px;
     padding: 40px 24px;
     box-sizing: border-box;
   }
 
   .video-container iframe {
-    width: 480px;  /* ✅ Fixed width allows gap to take effect */
+     /* ✅ Fixed width allows gap to take effect */
     aspect-ratio: 16 / 9;
     border: none;
   }
@@ -412,7 +451,7 @@ width: 100%;
 
   #mid{
     box-sizing: border-box;
-    padding:4% 10%;
+    padding:4% 12%;
     background: #000;
   }
   #mid>center{
@@ -456,47 +495,66 @@ width: 100%;
     text-align: center;
 }
    #main2{
-    max-width:1200px !important;
+    max-width:800px !important;
     place-self: center;
     padding: 2%;
     box-sizing: border-box;
    }
-   #sec1{
-    display: flex;
-    justify-content: center;
-    padding: 4%;
-    box-sizing: border-box;
-    
-   }
-   #sec1div2{
-    width:90%;
-   }
-   #sec1div2>img{
-    width: 100%;
-   }
-   #sec1pad, #sec1pad1{
-    box-sizing: border-box;
-    padding: 3%;
-   }
+  
 
-   @media(max-width:1218px){
-    #sec1{
-        flex-wrap: wrap;
-        text-align: center;
-    }
-    #sec1div2{
-        width:100%;
-       }
-   }
+   #sec1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+#sec1pad1 {
+    width: 60%;
+    padding: 20px; /* Optional for spacing */
+    box-sizing: border-box;
+}
+
+#sec1div2 {
+    width: 40%;
+    padding: 20px; /* Optional for spacing */
+    box-sizing: border-box;
+}
+
+#sec1div2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* #sec1 {
+  display: flex;
+
+  align-items: flex-start;
+}
+
+#sec1div2,
+#sec1pad {
+  width: 40%;
+  padding: 20px;
+  box-sizing: border-box;
+}*/
+
+#sec1div2 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+
 
 
    /* >>>>>>>>>> */
 
    
 /* >>>>>>>>>>> */
-
+#acc{
+  background:none;
+}
 .accordion {
-    max-width: 1200px;
+   
+    width: 800px;
     place-self: center;
     margin: 20px auto;
     background: white;
@@ -705,7 +763,7 @@ display: block;
       .slider {
         position: relative;
         width: 320px;
-        height: 600px;
+        
         overflow: hidden;
         place-self: center;
       }
@@ -802,12 +860,18 @@ display: block;
         }
       }
       #slider1{
-        height: 590px !important;
-
+        height: 500px !important;
+padding-bottom: 50px;
+      }
+      #slider1 .dots{
+         transform: translateY(16px) !important;
+      height: 10px;
+       
       }
       #slider1 .dot{
-        transform: translateY(2px);
-      }
+     height: 50px;
+      
+     }
       #slider2{
         height: 420px !important;
       }
@@ -817,10 +881,16 @@ display: block;
       }
 
       #slide3{
-        height: 200px !important;
+        height: 220px !important;
+        border: none !important;
+        box-shadow: none !important;
       }
       .slider iframe{
         height: 200px !important;
+      }
+      #slide3 .dots{
+        transform: translateY(10px);
+        background: white;
       }
 
       #price{
@@ -840,3 +910,9 @@ display: block;
     #price>img{
         transform: translateY(-2px) !important;
     }
+    .fbfbfb{
+       background:#fbfbfb !important;
+       
+    }
+    
+    
