@@ -918,7 +918,7 @@ display: block;
       /* Small screens (landscape phones, 576px to 767px) */
       @media (max-width: 767px) {
         #price{
-            font-size: medium !important;
+            font-size: small !important;
         }
         #letsdoh2 {
           font-size: 30px;
